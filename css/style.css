@@ -1,0 +1,94 @@
+:root {
+    --bg-gradient: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-hover-border: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-blue: #38bdf8;
+    --accent-pink: #f43f5e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 1.5rem 2rem 1.5rem;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-pink) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.subtitles {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+/* Grille principale */
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Style des cartes / tuiles */
+.tile {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 2.25rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tile:hover {
+    transform: translateY(-8px);
+    border-color: var(--card-hover-border);
+    box-shadow: 0 20px 30px -10px rgba(56, 189, 248, 0.15);
+}
+
+.tile h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom:
